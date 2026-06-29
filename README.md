@@ -1,10 +1,16 @@
 # Reference
 
-**One MCP server that lets _any_ AI coding agent search _every_ past session and memory file across _all_ your tools.**
+> **Let your AI agents search each other's past sessions.**
 
-Claude Code forgets what you did in Codex. Codex can't see your Claude history. Cursor knows neither. Reference fixes that: it's a single [MCP](https://modelcontextprotocol.io) server you register in each tool, and it reads every tool's session transcripts **and** memory/instruction files (`CLAUDE.md`, `AGENTS.md`, …) from your machine — so each agent can recall what any of them did before.
+<!-- LOGO: drop docs/logo.(png|svg) here and embed it above the tagline once ready -->
+
+One [MCP](https://modelcontextprotocol.io) server you register in each tool. It reads every tool's session transcripts **and** memory files (`CLAUDE.md`, `AGENTS.md`, …) from your machine — so any agent can recall what any of them did before. Claude Code forgets what you did in Codex; Codex can't see your Claude history; Cursor knows neither. Reference fixes that.
 
 ![Reference architecture](docs/architecture.svg)
+
+## Why I built this
+
+I kept asking Claude Code to go reference my Codex chats — to dig up what decisions it had made and *why*. Doing that by hand got old fast, so I built **Reference**. Whenever it's prompted, an agent establishes sessions to get direct access to your history across tools. I've been running it on my own system for a bit and it's been genuinely helpful — so I cleaned it up into a repo. **Would love feedback!**
 
 - 🔁 **Cross-tool, both ways** — Claude Code searches your Codex history; Codex searches your Claude history.
 - 🧠 **Sessions _and_ memory** — transcripts plus `CLAUDE.md` / `AGENTS.md` / `memory/*.md`.
