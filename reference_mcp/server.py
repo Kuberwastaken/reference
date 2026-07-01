@@ -133,7 +133,7 @@ def build_server() -> FastMCP:
         return "\n".join(out) if out else f"Nothing found for {query!r}."
 
     @mcp.tool()
-    def recall_evidence(query: str, limit: int = 8) -> str:
+    def recall_with_sources(query: str, limit: int = 8) -> str:
         """Combined recall with machine-readable evidence metadata.
 
         Use this before relying on an old-session or memory hit as current truth.

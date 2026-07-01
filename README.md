@@ -71,7 +71,7 @@ Then just ask your agent things like *"search my past sessions for how we wired 
 | Tool | What it does |
 |---|---|
 | `recall(query, limit?)` | **Start here.** Best matching past-session turns **and** memory snippets across every tool. |
-| `recall_evidence(query, limit?)` | JSON recall results with source type, timestamp, session/file refs, snippets, and verification paths before relying on old context. |
+| `recall_with_sources(query, limit?)` | JSON recall results with source type, timestamp, session/file refs, snippets, and verification paths before relying on old context. |
 | `search_sessions(query, source?, project?, role?, since_days?, limit?)` | Full-text search over all session transcripts. Filter by tool, project path, role, or recency. |
 | `search_memory(query, source?, limit?)` | Search `CLAUDE.md` / `AGENTS.md` / `memory/*.md` across tools. |
 | `list_sessions(source?, project?, limit?)` | Recent sessions (newest first) with tool, project, time, turn count. |
