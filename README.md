@@ -93,10 +93,10 @@ flowchart LR
     AD --> ST1[~/.claude/projects/**.jsonl]:::st
     AD --> ST2[~/.codex/sessions/**.jsonl]:::st
     AD --> ST3[CLAUDE.md · AGENTS.md · memory]:::st
-    classDef a fill:#a5d8ff,stroke:#1971c2;
-    classDef s fill:#d0bfff,stroke:#6741d9;
-    classDef d fill:#b2f2bb,stroke:#2b8a3e;
-    classDef st fill:#fff3bf,stroke:#e67700;
+    classDef a fill:#a5d8ff,stroke:#1971c2,color:#1a1a1a;
+    classDef s fill:#d0bfff,stroke:#6741d9,color:#1a1a1a;
+    classDef d fill:#b2f2bb,stroke:#2b8a3e,color:#1a1a1a;
+    classDef st fill:#fff3bf,stroke:#e67700,color:#1a1a1a;
 ```
 
 1. **Adapters** (`reference_mcp/adapters.py`) declare, per tool, where transcripts and memory files live and which parser to use. Built-ins cover Claude Code and Codex; more come from your `reference.toml`.
