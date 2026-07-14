@@ -6,6 +6,10 @@
 
 <p align="center"><strong>Let your AI agents search each other's past sessions.</strong></p>
 
+<p align="center">
+  <a href="https://www.skills.sh/kuberwastaken/reference"><img src="https://www.skills.sh/b/kuberwastaken/reference" alt="skills.sh"></a>
+</p>
+
 One [MCP](https://modelcontextprotocol.io) server you register in each tool. It reads every tool's session transcripts **and** memory files (`CLAUDE.md`, `AGENTS.md`, …) from your machine — so any agent can recall what any of them did before. Claude Code forgets what you did in Codex; Codex can't see your Claude history; Cursor knows neither. Reference fixes that.
 
 ![Reference architecture](docs/architecture.svg)
