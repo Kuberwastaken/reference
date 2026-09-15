@@ -10,7 +10,11 @@ from __future__ import annotations
 import json
 from datetime import datetime, timedelta, timezone
 
-from mcp.server.fastmcp import FastMCP
+try:
+    # mcp >= 2
+    from mcp.server.mcpserver import MCPServer as _MCPServer
+except ModuleNotFoundError:  # mcp < 2
+    from mcp.server.fastmcp import FastMCP as _MCPServer
 
 from . import __version__, search
 from .adapters import iter_files, load_adapters
@@ -62,8 +66,8 @@ def _memory_evidence(hit: search.MemoryHit) -> dict:
     }
 
 
-def build_server() -> FastMCP:
-    mcp = FastMCP("reference")
+def build_server() -> _MCPServer:
+    mcp = _MCPServer("reference")
 
     @mcp.tool()
     def search_sessions(
