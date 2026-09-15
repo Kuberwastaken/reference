@@ -1,6 +1,6 @@
 [project]
 name = "reference-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "One MCP server that lets any AI coding agent search every past session and memory file across all your tools (Claude Code, Codex, and more)."
 readme = "README.md"
 requires-python = ">=3.11"
