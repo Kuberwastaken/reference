@@ -149,7 +149,7 @@ def parse_codex(path: str, keep_thinking: bool = True) -> Iterator[Message]:
         ptype = payload.get("type")
         if ptype == "user_message":
             role = "user"
-        elif ptype in ("message", "agent_message"):
+        elif ptype in ("message", "agent_message", "transcript_segment"):  # transcript_segment = voice mode
             role = payload.get("role", "assistant") or "assistant"
         else:
             continue

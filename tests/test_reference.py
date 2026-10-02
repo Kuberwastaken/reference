@@ -30,6 +30,17 @@ def test_parse_codex():
     assert all(m.role in ("user", "assistant") for m in msgs)
 
 
+def test_parse_codex_voice():
+    # Codex voice mode (ChatGPT desktop app) logs speech as realtime_item / transcript_segment
+    msgs = list(normalize.parse_codex(str(FIX / "codex_voice_sample.jsonl")))
+    assert [m.role for m in msgs] == ["user", "assistant"]
+    assert "codeword be pvc" in msgs[0].text.lower()
+    # session start/close events are skipped
+    assert all("realtime_session" not in m.text for m in msgs)
+    hits = Index(msgs).search("codeword pvc")
+    assert hits and hits[0].message.source == "codex"
+
+
 def test_cross_tool_search():
     msgs = list(normalize.parse_claude(str(FIX / "claude_sample.jsonl")))
     msgs += list(normalize.parse_codex(str(FIX / "codex_sample.jsonl")))
