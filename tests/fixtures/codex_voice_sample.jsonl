@@ -1,0 +1,5 @@
+{"timestamp":"2026-10-02T15:18:56.000Z","type":"session_meta","payload":{"id":"01a0fd32-7032-78b1-8717-79c8fa107324","cwd":"/tmp/proj","source":"vscode"}}
+{"timestamp":"2026-10-02T15:18:57.000Z","type":"realtime_item","payload":{"id":"rt-1","realtime_session_id":"rs-1","type":"realtime_session_started"}}
+{"timestamp":"2026-10-02T15:19:10.000Z","type":"realtime_item","payload":{"id":"rt-2","realtime_session_id":"rs-1","type":"transcript_segment","role":"user","text":" Let our codeword be PVC"}}
+{"timestamp":"2026-10-02T15:19:14.000Z","type":"realtime_item","payload":{"id":"rt-3","realtime_session_id":"rs-1","type":"transcript_segment","role":"assistant","text":" Sounds good. The codeword is PVC."}}
+{"timestamp":"2026-10-02T15:19:30.000Z","type":"realtime_item","payload":{"id":"rt-4","realtime_session_id":"rs-1","type":"realtime_session_closed","outcome":"ended"}}
